@@ -1,0 +1,316 @@
+@font-face{
+  font-family: "Raleway Regular";
+  src: url("https://www.1001fonts.com/download/font/raleway.regular.ttf");
+}
+
+html{
+  font-size: 14px;
+}
+
+body {
+  background-color: #C3B091;
+  color: rgba(26, 26, 26, .7);
+  font-family: 'Montserrat', 'Raleway Regular', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-image: url(images/SfondoUffizi.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 63vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Nel seguito nei commenti saranno indicate le proprietà dello stile che sono ereditate e quindi non scritte esplicitamente.*/
+.button{  /*font-weight: normal, line-height: initial; */
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  border: 0;
+  background-color: rgb(179, 146, 55);
+  padding: 9.8px 14.7px;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 1.2em;
+  z-index: 1;
+}
+
+.button:hover {
+  background-color: rgb(128, 124, 73);
+}
+
+.button:active {
+  background-color: rgb(97, 94, 56);
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+header h1{ /*font-style: normal, line-height: initial*/
+  font-family: 'Noto Sans JP', sans-serif;
+  color: rgb(214, 202, 169);
+  font-size: 5.0em;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+nav {
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  font-family: 'Kiwi Maru', serif;
+  position: fixed;
+  top: 17vh;
+  bottom: 17vh;
+  left: 0;
+  width: 210px;
+  background-color: #363940;
+  border-top-right-radius: 14.7px;
+  border-bottom-right-radius: 14.7px;
+  z-index: 1;
+}
+
+nav a{ /*font-style: normal, font-family: 'Kiwi Maru', serif, line-height: initial*/
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:rgb(207, 169, 63);
+  padding: 10.5px;
+  border-bottom: 1px solid black;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a:hover{
+  background-color: rgb(126, 128, 29);
+  color:white;
+}
+
+nav a:active{
+  background-color: rgb(96, 97, 22);
+  color:white;
+}
+
+#firstChildNav{
+  border-top-right-radius: 10.5px;
+}
+
+#lastChildNav{
+  border-bottom-right-radius: 10.5px;
+}
+
+article{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 14px 14px 14px 224px;
+}
+
+#primary{
+  width:calc(40% - 21px);
+}
+
+#secondary{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:calc(60% - 21px);
+  padding:0;
+  margin-top:-14px;
+}
+
+section{
+  position: relative;
+  font-family: 'Work Sans', sans-serif;
+  background-color: white;
+  border: 1px solid #444;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+section::before {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 246, 199, 0.8);
+  border-radius: 14px;
+}
+
+#secondary section{
+   margin-top: 14px;
+}
+
+section h1, section h2{ /*font-style: normal, font-family: 'Work Sans', sans-serif, font-size: definito successivamente, line-height: initial*/
+  position:relative; /*Serve  per poter impostare il z-index ad 1*/
+  z-index: 1;
+  margin: 0;
+  color: #222;
+  font-weight: bold;
+}
+
+section h1{
+  font-size: 4em;
+}
+
+section h2{
+  font-size: 2em;
+  color: #444;
+}
+
+section p{ /*font-weight: normal, font-style: normal, line-height: initial*/
+  position: relative;
+  z-index: 1;
+  text-align: justify;
+  color: rgb(53, 53, 41);
+  font-size: 1.5em;
+  font-family: 'Lexend', sans-serif;
+  margin-top: 14px;
+}
+
+section img{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+footer {
+  background-color: #363940;
+  padding: 14px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+footer p{ /*font-family: 'Source Sans Pro', sans-serif*/
+  font-weight: normal;
+  color: rgb(207, 169, 63);
+  text-align: center;
+  font-size: 1.2em;
+  font-style: oblique;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+a { /*Per far cambiare il cursore visto che al momento non ci sono link*/
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  html{
+    font-size: 6px;
+  }
+
+  header {
+    height: 25vh;
+  }
+
+  header h1{
+    margin-bottom: 5px;
+    font-size: 5em;
+  }
+
+  .button{
+    padding: 3.36px 5.04px;
+    border-radius: 34.28px;
+    font-size: 1.5em;
+  }
+
+  nav{
+    position: static;
+    flex-direction: row;
+    justify-content: start;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  nav a{ /*font-style: normal, font-family: 'Kiwi Maru', serif, line-height: initial*/
+    text-align: center;
+    border-bottom: none;
+    border-right: 1px solid black;
+    padding: 8.64px 1.44px;
+    margin: 0;
+  }
+
+  #firstChildNav{
+    border-top-right-radius: 0;
+  }
+
+  #lastChildNav{
+    border-bottom-right-radius: 0;
+  }
+
+  article{
+    display: block;
+    margin: 4.8px;
+  }
+  #primary{
+    width:auto;
+  }
+  #secondary{
+    display: block;
+    width:auto;
+    margin-top:0;
+  }
+
+  section{
+    border-radius: 4.8px;
+    padding: 4.8px;
+  }
+
+  section h1{
+    font-size: 4em;
+  }
+  
+  section h2{
+    font-size: 3em;
+  }
+
+  #secondary section{
+      margin-top: 4.8px;
+  }
+
+  section::before {
+    border-radius: 4.8px;
+  }
+
+  section p{
+    margin-top: 4.8px;
+    font-size: 2.5em;
+  }
+
+  section img{
+    border-radius: 4.8px;
+  }
+
+  footer {
+    padding: 4.8px 0;
+  }
+
+  footer p{
+    font-size: 2em;
+  }
+}
