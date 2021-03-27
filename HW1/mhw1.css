@@ -121,7 +121,7 @@ nav a:active{
   border-bottom-right-radius: 10.5px;
 }
 
-article{
+#content{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -263,7 +263,7 @@ footer p{ /*font-family: 'Source Sans Pro', sans-serif*/
     border-bottom-right-radius: 0;
   }
 
-  article{
+  #content{
     display: block;
     margin: 4.8px;
   }
